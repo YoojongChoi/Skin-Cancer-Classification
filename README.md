@@ -37,3 +37,45 @@
     2. CNN with Images + Metadata + Residual Connections
     3. Images + Metadata with Data Augmentation
     4. Images + Metadata with Data Augmentation and Transfer Learning
+
+#### 📌 1. CNN with Images Only
+- 이미지 결과 1번 사진
+ 
+ - This model consists of five repeated blocks of convolutional layers, max pooling layers, and dropout layers, followed by a flatten layer and an output layer.
+ - In the final epoch, the accuracy on the validation data was approximately 0.76, and the loss was around 0.65. These results indicate that the model can classify images with relatively high accuracy.
+
+#### 📌 2. CNN with Images + Metadata + Residual Connections
+- 이미지 결과 2번 사진
+
+- This model incorporates residual connections and merges with metadata using a Concatenate layer. It takes both metadata and image data as inputs, combines them, and then produces the final output.
+- In the final epoch, the accuracy on the validation data was approximately 0.71, and the loss was around 0.79. Although we expected Model 2 to perform better than Model 1, its performance was lower due to factors such as data imbalance, overfitting issues, and suboptimal hyperparameter settings.
+
+#### 📌 3. Images + Metadata with Data Augmentation
+- Data Augmentation
+- 데이터 증강 사진
+- 3번 결과 사진
+
+- This model utilized augmented data and was implemented using CNN. To optimize hyperparameters, we employed random search. Both the validation and training datasets achieved an accuracy of 78.5%.
+- Since the training data size nearly doubled compared to the previous models, it can be inferred that the performance has improved.
+
+#### 📌 4. Images + Metadata with Data Augmentation and Transfer Learning
+- 4번 결과 사진
+
+- We chose **MobileNet** due to its low resource consumption, as our development was conducted on Colab with limited resources.
+- The classification was performed using both metadata and extracted image features. The accuracy on the validation and test datasets reached 84%.
+
+## 📝 Evaluation
+
+The lowest performance was observed when using a purely CNN-based approach without additional enhancements. This suggests that training a deep learning model from scratch, **without leveraging external knowledge or additional features, struggles to generalize well with limited data.**
+
+Incorporating metadata into the CNN model, whether in a standard CNN architecture or a ResNet-inspired structure, led to some improvements. However, the performance gains were not as significant as expected. **This highlights the challenge of effectively integrating structured data with image features, especially when the metadata is relatively simple compared to the complexity of the image features.**
+
+The best performance was achieved when using a pre-trained MobileNet model combined with metadata. **This outcome reinforces the power of transfer learning, where labeled data is often scarce.** The fact that a model pre-trained could still be fine-tuned for skin cancer classification suggests deep networks trained on general image datasets can learn transferable features that are useful for domain-specific tasks.
+
+## 📝 Reflection
+
+**One key takeaway from this study is the importance of data augmentation.** Regardless of the model used, applying augmentation consistently led to improved performance. This demonstrates that increasing data diversity helps models generalize better, reducing overfitting and mitigating the impact of data imbalance.
+
+Through this process, I realized how crucial it is to balance model complexity, data quality, and computational efficiency. Initially, I expected that adding metadata would lead to significant improvements, but the results showed that model architecture and feature extraction play a much bigger role. Additionally, optimizing hyperparameters, particularly in deep learning models, proved to be a decisive factor in achieving better performance.
+
+Overall, this study reaffirmed the effectiveness of transfer learning and the necessity of data augmentation in medical image classification. It also highlighted the importance of thoughtful model design and hyperparameter tuning to achieve the best possible results.
