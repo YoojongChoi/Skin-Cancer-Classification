@@ -5,6 +5,7 @@
 
 ### 📌 Objective
 - This project aims to accurately classify skin cancer images into one of seven types using an AI model. This classification system is designed to enhance the reliability of doctors' diagnoses and improve the efficiency of skin cancer treatment.
+- We conducted a study on skin cancer classification and performance analysis **using data augmentation, CNN, ResNet, and transfer learning with MobileNet, along with hyperparameter optimization.**
 
 ### 📌 Team Member
 - 이승헌, 이주원, 최승우, 최유종
@@ -23,9 +24,16 @@
 
 ![Image](https://github.com/user-attachments/assets/4967aa9a-766b-4ee0-bf45-4ed2fec1a7fd)
 
-- As you can see in the graph, label 0 is overwhelmingly dominant. Considering this data distribution, the most critical challenge in training the model was how to handle the imbalance in the dataset.
+- As you can see in the graph, label 0 is overwhelmingly dominant. Considering this data distribution, the most critical challenge in training the model was how to **handle the imbalance in the dataset.**
 
 ## 🔍Project Flow
 ### 1. Data Splitting
 - Out of a total of 10,015 data samples, we divided them into training(6410), validation(1602), and test(2003) sets.
 
+### 2. Model Design for Performance Analysis
+- We designed a total of four models and conducted experiments. The reason for structuring the models in four stages was to compare and analyze how the additional components at each stage affect the model's performance.
+  
+    1. CNN with Images Only
+    2. CNN with Images + Metadata + Residual Connections
+    3. Images + Metadata with Data Augmentation
+    4. Images + Metadata with Data Augmentation and Transfer Learning
