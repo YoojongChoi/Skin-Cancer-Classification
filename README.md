@@ -39,28 +39,39 @@
     4. Images + Metadata with Data Augmentation and Transfer Learning
 
 #### 📌 1. CNN with Images Only
-- 이미지 결과 1번 사진
- 
+- Results
+![Image](https://github.com/user-attachments/assets/75bb7a6d-92c4-4926-970e-ea2c4764f099)
+
+![Image](https://github.com/user-attachments/assets/81443e34-9553-487a-ac83-b36ef2ed6357)
+
  - This model consists of five repeated blocks of convolutional layers, max pooling layers, and dropout layers, followed by a flatten layer and an output layer.
  - In the final epoch, the accuracy on the validation data was approximately 0.76, and the loss was around 0.65. These results indicate that the model can classify images with relatively high accuracy.
 
 #### 📌 2. CNN with Images + Metadata + Residual Connections
-- 이미지 결과 2번 사진
+- Results
+![Image](https://github.com/user-attachments/assets/e8842714-1fec-4b93-81c5-eee539174498)
+![Image](https://github.com/user-attachments/assets/e40d4a5e-c4e6-4ca6-8232-12d220f7f8b2)
 
 - This model incorporates residual connections and merges with metadata using a Concatenate layer. It takes both metadata and image data as inputs, combines them, and then produces the final output.
 - In the final epoch, the accuracy on the validation data was approximately 0.71, and the loss was around 0.79. Although we expected Model 2 to perform better than Model 1, its performance was lower due to factors such as data imbalance, overfitting issues, and suboptimal hyperparameter settings.
 
 #### 📌 3. Images + Metadata with Data Augmentation
 - Data Augmentation
-- 데이터 증강 사진
-- 3번 결과 사진
+
+![Image](https://github.com/user-attachments/assets/5ffcc596-449f-4abb-92f0-304947fd2b91)
+
+- Results
+![Image](https://github.com/user-attachments/assets/0ef7e052-bd08-4052-80e2-875a2f67af70)
+![Image](https://github.com/user-attachments/assets/29036eef-24c4-4e9f-bc4b-5746cee380eb)
+![Image](https://github.com/user-attachments/assets/45deac4a-9452-42c0-87dd-fd8f0fc81585)
 
 - This model utilized augmented data and was implemented using CNN. To optimize hyperparameters, we employed random search. Both the validation and training datasets achieved an accuracy of 78.5%.
 - Since the training data size nearly doubled compared to the previous models, it can be inferred that the performance has improved.
 
 #### 📌 4. Images + Metadata with Data Augmentation and Transfer Learning
 - 4번 결과 사진
-
+![Image](https://github.com/user-attachments/assets/1be8e87e-b7b6-4504-a3f7-46c9c62a08d1)
+![Image](https://github.com/user-attachments/assets/8e183747-c841-458d-ae96-366220085b8b)
 - We chose **MobileNet** due to its low resource consumption, as our development was conducted on Colab with limited resources.
 - The classification was performed using both metadata and extracted image features. The accuracy on the validation and test datasets reached 84%.
 
