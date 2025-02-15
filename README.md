@@ -18,6 +18,10 @@
 - Each image has a resolution of 600x450 pixels, and the dataset includes not only images but also metadata associated with each image. The metadata contains various details such as the patient's age, gender, and lesion location. 
 
 ### 📌 Distribution
+- Labels
+![Image](https://github.com/user-attachments/assets/e3e3d9fa-753d-403c-a155-931261f2b4eb)
+
+![Image](https://github.com/user-attachments/assets/4967aa9a-766b-4ee0-bf45-4ed2fec1a7fd)
 
 - As you can see in the graph, label 0 is overwhelmingly dominant. Considering this data distribution, the most critical challenge in training the model was how to handle the imbalance in the dataset.
 
