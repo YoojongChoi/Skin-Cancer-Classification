@@ -61,6 +61,8 @@
 ![Image](https://github.com/user-attachments/assets/5ffcc596-449f-4abb-92f0-304947fd2b91)
 
 - Results
+
+
 ![Image](https://github.com/user-attachments/assets/0ef7e052-bd08-4052-80e2-875a2f67af70)
 ![Image](https://github.com/user-attachments/assets/29036eef-24c4-4e9f-bc4b-5746cee380eb)
 ![Image](https://github.com/user-attachments/assets/45deac4a-9452-42c0-87dd-fd8f0fc81585)
@@ -69,7 +71,7 @@
 - Since the training data size nearly doubled compared to the previous models, it can be inferred that the performance has improved.
 
 #### 📌 4. Images + Metadata with Data Augmentation and Transfer Learning
-- 4번 결과 사진
+- Results
 ![Image](https://github.com/user-attachments/assets/1be8e87e-b7b6-4504-a3f7-46c9c62a08d1)
 ![Image](https://github.com/user-attachments/assets/8e183747-c841-458d-ae96-366220085b8b)
 - We chose **MobileNet** due to its low resource consumption, as our development was conducted on Colab with limited resources.
